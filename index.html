@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Notes!</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <button class="add-note" type="button">
+          <svg class="add-icon" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+          Add Note
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+    </main>
+
+    <div class="screen-overlay hidden" aria-hidden="true" tabindex="-1"></div>
+
+    <div class="note-modal hidden" role="dialog" aria-hidden="true">
+      <form name="note-form" action="#" method="POST">
+        <input type="radio" name="note-color" value="red" checked>
+        <input type="radio" name="note-color" value="green">
+        <input type="radio" name="note-color" value="yellow">
+        <input type="radio" name="note-color" value="blue">
+
+        <input id="title" name="title" type="text" placeholder="Untitled" required>
+        <textarea id="body" name="body" placeholder="Just start typing here" required></textarea>
+
+        <button class="cancel-note" type="button">Cancel</button>
+        <button class="save-note" type="submit" disabled>Add</button>
+      </form>
+    </div>
+
+    <div class="delete-modal hidden" role="dialog" aria-hidden="true">
+      <h3>Delete Note</h3>
+      <p>Are you sure you want to delete this note?</p>
+      <div class="delete-actions">
+        <button class="cancel-delete" type="button">Cancel</button>
+        <button class="delete-note" type="button">Delete</button>
+      </div>
+    </div>
+
+    <script src="js/modal.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/note.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

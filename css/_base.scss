@@ -1,0 +1,84 @@
+$blue: #56b6bf;
+$red: #faa9b0;
+$green: #c6edda;
+$yellow: #fbdbae;
+$lightgrey: #f9f9fb;
+$mediumgrey: #9ba8b0;
+$mediumblue: #adcbfb;
+
+$break-med: 800px;
+$break-lg: 1000px;
+$break-sm: 600px;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $lightgrey;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  padding-top: 30px;
+}
+
+button {
+  color: #FFF;
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  background-color: $mediumgrey;
+  cursor: pointer;
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+// Header
+.main-header {
+  width: 100%;
+  background-color: #000;
+  height: 100px;
+}
+
+.add-note {
+  float: right;
+  background-color: $blue;
+  width: 175px;
+  margin-top: 25px;
+  padding: 0;
+  line-height: 1.8;
+  @media screen and (max-width: $break-sm) {
+    width: 100%;
+  }
+}
+
+.add-icon {
+  fill: #FFF;
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  padding-top: 2px;
+}
+
+// Delete
+.delete-modal {
+  h3 {
+    font-size: 24px;
+  }
+  p {
+    color: $mediumgrey;
+  }
+}

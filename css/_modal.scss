@@ -1,0 +1,82 @@
+.screen-overlay {
+  position: fixed;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: .3;
+}
+
+.note-modal {
+  position: fixed;
+  top: 100px;
+  background-color: #FFF;
+  height: 80%;
+  z-index: 100;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 7px;
+  border-top: 10px solid $red;
+  padding: 20px 50px;
+  &.red {
+    border-color: $red;
+  }
+  &.green {
+    border-color: $green;
+  }
+  &.yellow {
+    border-color: $yellow;
+  }
+  &.blue {
+    border-color: $mediumblue;
+  }
+  @media screen and (max-width: $break-lg) {
+    width: 80%;
+  }
+  @media screen and (max-width: $break-sm) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+}
+
+.delete-modal {
+  position: fixed;
+  padding: 30px;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 7px;
+  width: 500px;
+  height: 300px;
+  background-color: #FFF;
+}
+
+.cancel-note, .cancel-delete {
+  position: absolute;
+  left: 50px;
+  bottom: 30px;
+  width: 125px;
+  background-color: rgba($mediumgrey, .6);
+}
+
+.save-note, .delete-note {
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+  width: 125px;
+  background-color: $blue;
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+.delete-note {
+  right: 30px;
+}
+
+.cancel-delete {
+  left: 30px;
+}
